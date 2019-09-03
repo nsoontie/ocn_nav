@@ -1,0 +1,2 @@
+some_unstag=0*sometauy;
+some_unstag(:,1:$y.size-1,:)=0.5*(sometauy(:,1:$y.size-1,:) + sometauy(:,0:$y.size-2,:));

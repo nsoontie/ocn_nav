@@ -1,0 +1,2 @@
+sozo_unstag=0*sozotaux;
+sozo_unstag(:,:,1:$x.size-1)=0.5*(sozotaux(:,:,1:$x.size-1) + sozotaux(:,:,0:$x.size-2));

@@ -1,0 +1,2 @@
+vozo_unstag=0*vozocrtx;
+vozo_unstag(:,:,:,1:$x.size-1)=0.5*(vozocrtx(:,:,:,1:$x.size-1) + vozocrtx(:,:,:,0:$x.size-2));
