@@ -1,0 +1,7 @@
+This directory contains notebooks, scripts, and data for drifters deployed in NL region since 2018 and stored in the CMEMS NRT currents product.
+
+CMEMS product:
+https://data.marine.copernicus.eu/product/INSITU_GLO_PHY_UV_DISCRETE_NRT_013_048/
+CMEMS dataset ID:
+cmems_obs-ins_glo_phy-cur_nrt_drifter_irr
+
