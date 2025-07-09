@@ -15,6 +15,7 @@ drifterID_file = 'NLDrifterIDs.yaml'
 d = 'NLSummerAZMP2024' # The deployment to download. Should be documented in drifterID_file.
 d = 'StudentsonIce2024'
 d = 'NLFallAZMP2024'
+d = 'all'
 
 with open(drifterID_file) as f:
     deployments = yaml.safe_load(f)
@@ -39,31 +40,29 @@ for ID in IDs:
     # If empty, download history (longest recrod)
     output =  copernicusmarine.get(
         dataset_id=dataset_id,
-        show_outputnames=True,
+        #show_outputnames=True,
         filter=f'*{ID}*.nc',
-        force_download=True,
-        overwrite_output_data=True,
+        overwrite=True,
         dataset_part='monthly'
     )
-    if not output:
+    print(output)
+    if output.number_of_files_to_download == 0:
         output =  copernicusmarine.get(
             dataset_id=dataset_id,
-            show_outputnames=True,
+            #show_outputnames=True,
             filter=f'*{ID}*.nc',
-            force_download=True,
-            overwrite_output_data=True,
+            overwrite=True,
             dataset_part='latest'
         )
-    if not output:
+    if output.number_of_files_to_download == 0:
         output =  copernicusmarine.get(
             dataset_id=dataset_id,
-            show_outputnames=True,
+            #show_outputnames=True,
             filter=f'*{ID}*.nc',
-            force_download=True,
-            overwrite_output_data=True,
+            overwrite=True,
             dataset_part='history'
         )
-    if not output:
+    if output.number_of_files_to_download == 0:
         nodata_IDs.append(ID)
 print(f'Finished processings IDs: {IDs}')
 print(f'The following IDs contained no data: {nodata_IDs}')
