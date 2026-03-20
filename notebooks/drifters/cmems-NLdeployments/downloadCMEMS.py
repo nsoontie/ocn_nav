@@ -12,7 +12,8 @@ import copernicusmarine
 dataset_id = 'cmems_obs-ins_glo_phy-cur_nrt_drifter_irr'
 
 drifterID_file = 'NLDrifterIDs.yaml'
-d = 'NLSummerAZMP2024' # The deployment to download. Should be documented in drifterID_file.
+d = 'StudentsonIce2025'
+#d = 'NLSummerAZMP2024' # The deployment to download. Should be documented in drifterID_file.
 #d = 'StudentsonIce2024'
 #d = 'NLFallAZMP2024'
 #d = 'all'
